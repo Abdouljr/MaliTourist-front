@@ -1,0 +1,7 @@
+{
+  "name": "MaliTourist",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
