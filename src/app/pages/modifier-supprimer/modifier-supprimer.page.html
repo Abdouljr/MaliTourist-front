@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-icon name="arrow-back-outline" class="ion-padding" routerLink="/liste-regions"></ion-icon>
+  <div class="main-section">
+    <h3 class="ion-padding"> {{ modification ? 'Modifier Région':'Ajouter Région'}}</h3>
+    <div class="form ion-padding ion-margin">
+      <!-- <ion-select interface="action-sheet" placeholder="Sélectionner le type" [(ngModel)]="type"> 
+        <ion-select-option value="expense"> Mali</ion-select-option>
+        <ion-select-option value="income"> Niger</ion-select-option>
+      </ion-select> -->
+      <p> {{message}} </p>
+      <ng-container *ngIf="!modification">
+        <ion-input placeholder=" Image" type="file" name="file" (change)="changeImage($event)"></ion-input>
+      </ng-container>
+      <ion-input placeholder=" Nom" [(ngModel)]="nom"></ion-input>
+      <ion-input placeholder=" Code Région" [(ngModel)]="codeRegion"></ion-input>
+      <ion-input placeholder=" Domaine Activité" type="text" [(ngModel)]="domaineAct"></ion-input>
+      <ion-input placeholder=" Superficie" type="text" [(ngModel)]="superficie"></ion-input>
+      <ion-input placeholder=" Langue Majoritaire" type="text" [(ngModel)]="langueMajoritaire"></ion-input>
+      <ion-input placeholder=" Description" type="text" [(ngModel)]="description"></ion-input>
+      <ion-button color="dark" expand="block" (click)="ajouterRegion()">{{modification ? 'Modifier':'Ajouter'}}&nbsp;<ion-spinner *ngIf="chargement"></ion-spinner></ion-button>
+    </div>
+  </div>
+</ion-content>

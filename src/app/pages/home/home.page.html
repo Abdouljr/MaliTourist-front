@@ -1,0 +1,55 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" size="small"></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title>MaliTourist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-slider">
+    <ion-slides pager="true">
+      <ion-slide>
+        
+        <img src="/assets/Mali.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/Gao.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/Mopti.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/Sikasso.jpg">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="cartes">
+      <ion-card class="carte" [routerLink]="['/detail-region']">
+        <img src="assets/Gao.jpg">
+      </ion-card>
+       <ion-card class="carte" [routerLink]="['/detail-region']">
+        <img src="assets/Sikasso.jpg">
+      </ion-card>
+  </div>
+  <h1>Informations</h1>
+  <ion-card class="informations">
+    <p class="info"><b>Capitale:</b> Bamako</p>
+    <p class="info"><b>Superficie d'activité:</b> 1,24 million Km²  </p>
+    <p class="info"><b>Date d'independance:</b> 22 septembre 1960</p>
+    <p class="info"> <b>Population:</b> 20,86 millions (2021)</p>
+    <p class="info"> <b>Langue Officielle:</b> Français</p>
+  </ion-card>
+  <h2>Le Mali est constitué de 10 régions</h2>
+  <div class="btn-decouvrir" >
+    <ion-button [routerLink]="['/liste-regions']">Découvir les régions</ion-button>
+  </div>
+</ion-content>
+

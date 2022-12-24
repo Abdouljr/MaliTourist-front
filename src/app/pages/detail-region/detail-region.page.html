@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title class="entete"> detail-region</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <div class="image-slider">
+    <i [routerLink]="['/liste-regions']"><ion-icon name="arrow-back-outline"></ion-icon></i>
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="/assets/{{imgRegion}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/{{imgRegion}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/{{imgRegion}}">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="region-info">
+<div class="info-info">
+<!------------------------------- QUAND ON VEUX DE DETAILS  ------------------>
+<div class="info-basic">         
+  <h1>{{nom}}</h1>
+    <p class="description" *ngIf="!voirPlus"> {{desc}} 
+      <span > ... </span>
+      <span class="more-less" (click)="voirPlus = true">&nbsp; Voir plus</span> 
+    </p>
+    <p class="description" *ngIf="voirPlus"> {{description}}
+        <span class="more-less" (click)="voirPlus = false">&nbsp; Voir moins</span>
+    </p>
+</div> 
+    <ion-card class="carte-region">
+      <div class="plus-info">
+        <p class="info"><b>Population:</b> 425 000 hab  en 2022</p>
+        <p class="info"><b>Domaine d'activité:</b> {{domaineAct}}</p>
+        <p class="info"><b>Superficie:</b> {{superficie}}</p>
+        <p class="info"> <b>Langue Majoritaire:</b> {{langue}}</p>
+      </div>
+    </ion-card>
+  </div>
+</div>
+
+
+</ion-content>

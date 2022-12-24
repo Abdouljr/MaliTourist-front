@@ -1,0 +1,36 @@
+// .premier-card {
+//     margin-top: 80px;
+// }
+.entete{
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    text-transform: capitalize;
+    }
+
+.nom-region{
+    margin: 0px;
+    padding-left: 10px;
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+}
+
+.button-text{
+    font-size: 13px;
+    color: black;
+    text-transform: lowercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.ms{
+   display: flex; 
+}

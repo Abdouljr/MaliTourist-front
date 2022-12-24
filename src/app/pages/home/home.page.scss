@@ -1,0 +1,50 @@
+.image-slider img{
+  max-height: 220px;
+}
+
+.cartes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.carte{
+  margin: 5px
+}
+
+h1{
+  text-align: center;
+  margin: 5px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+h2{
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+
+.carte img{
+  height: 140px;
+  object-fit: cover;
+}
+
+.informations{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 14px;
+}
+
+p.info{
+  margin:5px 0px;
+  color: black;
+}
+
+.btn-decouvrir{
+  margin-top: 5px;
+ display: flex;
+ justify-content: center;
+}

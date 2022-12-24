@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title class="entete"> Commentaire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="imgdiv">
+    <img class="tweet-img" src="assets/Gao.jpg">
+  </div>
+  <div class="description">
+    <h2>Sikasso</h2>
+    <p>Sikasso est la seconde ville du Mali avec une population estimée à 425 000 habitants. Elle se situe au sud du pays à proximité des frontières burkinabée et ivoirienne. La ville est le chef-lieu de la région et du cercle de Sikasso. La cité s'urbanise à la fin du XIXème siècle à l'apogée du royaume Sénoufo de kénédougou dirigé par la dynastie Traoré et devient la capitale du royaume. Sikasso bénéficie d'un climat tropical de savane favorable à l'agriculture qui fait d'elle un important marché agricole.</p>
+    <p class="info"><b>Population:</b> 425 000 hab  en 2022</p>
+    <p class="info"><b>Domaine d'activité:</b> 425 000 hab  en 2022</p>
+    <p class="info"><b>Superficie:</b> 425 000 hab  en 2022</p>
+    <p class="info"> <b>Langue Majoritaire:</b> 425 000 hab  en 2022</p>
+  </div> -->
+  
+  <div class="image-slider">
+    <i [routerLink]="['/liste-regions']"><ion-icon name="arrow-back-outline"></ion-icon></i>
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="/assets/{{imgRegion}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/{{imgRegion}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="/assets/{{imgRegion}}">
+      </ion-slide>
+    </ion-slides>
+  </div>
+    <div class="region-info">
+      <div class="info-info">
+<!------------------------------- QUAND ON VEUX DE DETAILS  ------------------>
+<div class="info-basic">       
+  <h1 class="commentaire">Commentaires</h1>
+</div> 
+<ng-container *ngFor="let commentaire of commentaires">
+  <ion-card class="carte-commentaire">
+    <ion-card-header class="carte-header">
+      <ion-card-subtitle class="titre-commentaire"> {{commentaire.pseudo}} </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="contenu">
+      {{commentaire.contenu}}
+    </ion-card-content>
+  </ion-card>
+</ng-container>
+
+<ion-card class="carte-commentaire">
+  <ion-card-header class="carte-header">
+    <ion-card-subtitle class="titre-commentaire">Ibrahima Ballo</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content class="contenu">
+    je ne sais pas quoi ecrire ici pour l'instant donc voila tu vois.
+  </ion-card-content>
+</ion-card>
+
+<ion-card class="carte-commentaire">
+  <ion-card-header class="carte-header">
+    <ion-card-subtitle class="titre-commentaire">Fatoumata Coulibaly</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content class="contenu">
+    je suis ne sais pas quoi ecrire ici pour l'instant donc voila tu vois.
+  </ion-card-content>
+</ion-card>
+
+<ion-card class="carte-commentaire">
+  <ion-card-header class="carte-header">
+    <ion-card-subtitle class="titre-commentaire">Sékou Diakité</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content class="contenu">
+    je suis ne sais pas quoi ecrire ici pour l'instant donc voila tu vois.
+  </ion-card-content>
+</ion-card>
+
+<div class="div-commentaire">
+  <ion-card class="carte-commentaire">
+    <ion-card-header class="carte-header">
+      <ion-card-subtitle class="titre-commentaire">Sékou Diakité</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="contenu">
+      je suis ne sais pas quoi ecrire ici pour l'instant donc voila tu vois.
+    </ion-card-content>
+  </ion-card>
+</div>
+      </div>
+      <ion-card class="add-button">
+        <ion-item lines="none">
+          <ion-input   placeholder="commentaire de l'utilisateur .." [(ngModel)]="commentaire"></ion-input>
+          <ng-container *ngIf="commentaire.length < 2">
+            <i><ion-icon slot="icon-only" name="send" size="small" color="medium"></ion-icon></i>
+          </ng-container>                                         
+            <ng-container *ngIf="commentaire.length >= 2">
+             <i><ion-icon slot="icon-only" name="send" size="small" color="primary" (click)="accepter()"></ion-icon></i>
+            </ng-container> 
+        </ion-item>
+      </ion-card>
+    </div>
+
+
+</ion-content>

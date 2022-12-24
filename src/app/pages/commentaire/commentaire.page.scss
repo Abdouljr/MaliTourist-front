@@ -1,0 +1,125 @@
+
+// .couleur{
+    
+//     background-color: wheat;
+//     border-radius: 20px 20px 0px 0px;
+//     height: 100px;
+//     width: 100%;
+// }
+
+.entete{
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    text-transform: capitalize;
+    }
+    
+    ion-content{
+        position: relative;
+    }
+    
+    .image-slider{
+        position: relative;
+        ion-icon{
+            position: absolute;
+            z-index: 2;
+            margin: 10px;
+            background: #FDFCFC;
+            padding: 2px 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        ion-slides{
+            --bullet-background-active: #5f34df;
+            height: 180px;
+            width: 100%;
+            img{
+                width: 100vw;
+                max-width: 100vw;
+                object-fit: cover;
+            }
+                
+        }
+        
+    }
+    
+    .region-info{
+        position: absolute;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background: #FFF;
+        margin-top: -10px;
+        width: 100%;
+        z-index: 1;
+    
+        .info-info{
+            padding: 10px
+        }
+    
+    }
+    
+    h1,p{
+        margin: 0 0 8px 0;
+    
+    }
+    
+    h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .description{
+        font-weight: 600;
+        color: #9E9E9E;
+        font-size: 0.8rem;
+    }
+    span{
+        color: #000;
+    }
+    
+    .carte-region{
+        padding: 15px;
+        margin: 0px;
+    }
+    
+    .carte-region p{
+        color: black;
+        font-size: 14px;
+    }
+    
+    commentaire{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .carte-commentaire{
+        margin: 0px 0px 10px 0px;
+        border-radius: 15px 15px 0px 15px;
+    }
+    
+    .carte-header{
+        padding: 10px 10px 5px;
+    }
+    
+    .titre-commentaire{
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 15px;
+        color: #000;
+    }
+    
+    .div-commentaire{
+        margin-bottom: 65px;
+    }
+    
+    .contenu{
+        padding: 0px 10px 13px;
+    }
+    
+    .add-button {
+        // --background: #383a3e;
+        position: fixed;
+        bottom: 10px;
+        width: 90%;
+        --color: #ffffff;
+        margin: 12px;
+    }

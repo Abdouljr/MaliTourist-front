@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" size="small"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>MaliTourist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngFor="let region of regions; index as i">
+    <ion-card class="premier-card">
+    <a href=""><img class="tweet-img" src="assets/{{region.image}}" [routerLink]="['/detail-region',region.id]"></a>
+    <p class="nom-region"> {{region['nom']}} </p>
+    <div class="icons">
+      <div>
+        <ion-button size="small" fill="clear" [routerLink]="['/commentaire',region.id]">
+          <ion-icon name="chatbubble-ellipses"></ion-icon>
+          <p class="button-text"> {{listeCommentaires[i] }} comantaires</p>
+        </ion-button>
+      </div>
+      <div class="ms">
+        <div>
+          <ion-button size="small" fill="clear" [routerLink]="['/modifier-ajouter', region.id]">
+            <ion-icon name="create" color="success"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button size="small" fill="clear" (click)="supprimer(region)">
+            <ion-icon name="trash" color="danger"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button size="small" fill="clear" [routerLink]="['/modifier-ajouter/ajouter']">
+            <ion-icon name="add" color="success"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  </ng-container>
+  <!-- <ng-container>
+    <ion-card class="premier-card" [routerLink]="['/detail-region']">
+    <img class="tweet-img" src="assets/Mopti.jpg">
+    <p class="nom-region">Mopti</p>
+    <ion-button size="small" fill="clear">
+      <ion-icon name="chatbubble-ellipses"></ion-icon>
+      <p class="button-text">13 comantaires</p>
+    </ion-button>
+  </ion-card>
+  </ng-container>
+  <ng-container>
+    <ion-card class="premier-card" [routerLink]="['/detail-region']">
+    <img class="tweet-img" src="assets/Sikasso.jpg">
+    <p class="nom-region">Sikasso</p>
+    <ion-button size="small" fill="clear">
+      <ion-icon name="chatbubble-ellipses"></ion-icon>
+      <p class="button-text">13 comantaires</p>
+    </ion-button>
+  </ion-card>
+  </ng-container> -->
+    <!-- <ion-button size="small" fill="clear">
+      <ion-icon name="create" color="success"></ion-icon>
+      <p class="button-text" > Modifier</p>
+    </ion-button>      
+      <ion-button fill="clear">
+        <p class="button-text"> Supprimer</p> <ion-icon size="small" slot="start" name="trash" color="danger"></ion-icon>
+      </ion-button>  -->
+  
+</ion-content>
